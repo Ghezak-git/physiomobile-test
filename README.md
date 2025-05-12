@@ -145,6 +145,7 @@ Unauthorized requests will return `401 Unauthorized`.
 - PostgreSQL must be installed and running locally
 - The API will be served at `http://localhost:8080`
 - Default Laravel port for PHP-FPM is 9000
+- You can export and try the API using Postman
 
 ---
 
