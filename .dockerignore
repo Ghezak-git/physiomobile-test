@@ -1,0 +1,29 @@
+# Ignore the Git folder
+.git
+.gitignore
+
+# Ignore node stuff
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# Ignore Laravel stuff
+vendor
+storage/*.key
+.env
+.env.*
+*.log
+*.sqlite
+.phpunit.result.cache
+
+# Docker
+docker-compose.override.yml
+docker-compose.yml
+Dockerfile
+
+# IDE & system files
+.idea
+.vscode
+*.DS_Store
+Thumbs.db
