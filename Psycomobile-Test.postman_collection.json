@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "a4672b87-365a-4044-940b-2e1c8d1dfbd7",
+		"name": "Psycomobile-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10259672"
+	},
+	"item": [
+		{
+			"name": "Create Patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accessKey",
+						"value": "supersecret123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"id_type\": \"KTP\",\r\n    \"id_no\": \"1234567890123456\",\r\n    \"gender\": \"male\",\r\n    \"dob\": \"1990-05-12\",\r\n    \"address\": \"123 Example Street, Jakarta, Indonesia\",\r\n    \"medium_acquisition\": \"Online Campaign\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev}}/api/v1/patients",
+					"host": [
+						"{{dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patient",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accessKey",
+						"value": "supersecret123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe1\",\r\n    \"email\": \"john.doe@example.com1\",\r\n    \"id_type\": \"KTP1\",\r\n    \"id_no\": \"12345678901234561\",\r\n    \"gender\": \"female\",\r\n    \"dob\": \"1990-05-11\",\r\n    \"address\": \"121 Example Street, Jakarta, Indonesia\",\r\n    \"medium_acquisition\": \"Online Campaign1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev}}/api/v1/patients/1",
+					"host": [
+						"{{dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"patients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accessKey",
+						"value": "supersecret123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dev}}/api/v1/patients",
+					"host": [
+						"{{dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Details Patient",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accessKey",
+						"value": "supersecret123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dev}}/api/v1/patients/1",
+					"host": [
+						"{{dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"patients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patient",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accessKey",
+						"value": "supersecret123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dev}}/api/v1/patients/1",
+					"host": [
+						"{{dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"patients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "dev",
+			"value": "http://103.196.154.43:8080",
+			"type": "string"
+		},
+		{
+			"key": "secrect-key",
+			"value": "supersecret123",
+			"type": "string"
+		}
+	]
+}
